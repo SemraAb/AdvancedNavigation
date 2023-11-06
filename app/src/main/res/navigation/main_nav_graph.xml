@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.samra.advancednavigationcrocusoft.view.MainFragment"
+        android:label="Main Fragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_group1_nav_graph"
+            app:destination="@id/group1_nav_graph" />
+        <action
+            android:id="@+id/action_mainFragment_to_group2_nav_graph"
+            app:destination="@id/group2_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/DFragment"
+        android:name="com.samra.advancednavigationcrocusoft.view.DFragment"
+        android:label="D Fragment"
+        tools:layout="@layout/fragment_d" />
+    <include app:graph="@navigation/group1_nav_graph" />
+    <include app:graph="@navigation/group2_nav_graph" />
+    <fragment
+        android:id="@+id/EFragment"
+        android:name="com.samra.advancednavigationcrocusoft.view.EFragment"
+        android:label="E Fragment"
+        tools:layout="@layout/fragment_e" />
+    <fragment
+        android:id="@+id/FFragment"
+        android:name="com.samra.advancednavigationcrocusoft.view.FFragment"
+        android:label="F Fragment"
+        tools:layout="@layout/fragment_f" />
+</navigation>
